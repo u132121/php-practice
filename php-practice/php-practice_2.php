@@ -4,10 +4,6 @@ echo "1から100までのカウントを開始します。\n\n";
 
 for($i = 1; $i <= 100; $i++) {
     switch($i) {
-        case $i % 4 !== 0 && $i % 5 !== 0:
-            echo "{$i}\n";
-            break;
-
         case $i % 4 === 0 && $i % 5 === 0:
             echo "tic-tac\n";
             break;
@@ -16,8 +12,12 @@ for($i = 1; $i <= 100; $i++) {
             echo "tic\n";
             break;
 
-        default:    // $i % 5 === 0 のとき
+        case $i % 5 === 0:
             echo "tac\n";
+            break;
+
+        default:
+            echo "{$i}\n";
             break;
     };
 };
