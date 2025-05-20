@@ -69,9 +69,9 @@ echo hello('安藤');
 
 // Q11 関数-2
 function calcTaxinPrice($taxOutPrice) {
-    $tax = 0.1;
+    define('TAX', 0.1);
 
-    return $taxOutPrice + $taxOutPrice * $tax;
+    return $taxOutPrice + $taxOutPrice * TAX;
 };
 
 $price = 1000;
